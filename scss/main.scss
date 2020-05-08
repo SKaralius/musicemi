@@ -1,0 +1,107 @@
+@import "config";
+
+body {
+	ul {
+		padding: 0;
+	}
+	background: $primaryColor;
+	color: $secondaryColor;
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+}
+
+.main-content {
+	min-height: calc(100vh - 80px);
+}
+
+.title {
+	text-align: center;
+	& > h1 {
+		font-size: 3rem;
+		margin: 0 3rem;
+	}
+	& > h3 {
+		padding: 1.5rem;
+		color: $tetriaryColor;
+		border-bottom: $tetriaryColor 3px double;
+		border-top: $tetriaryColor 3px double;
+	}
+}
+
+//Pictures
+
+img {
+	max-width: 270px;
+}
+
+.pictures > ul {
+	flex-flow: row wrap;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	& > li {
+		gap: 30px 30px;
+	}
+}
+
+//BIO
+
+section {
+	position: relative;
+	&:after {
+		content: "";
+		background: url("../img/bg.jpg");
+		opacity: 1;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+.biography {
+	padding: 2rem;
+	text-align: center;
+}
+
+.selfie {
+	width: 250px;
+	border: $tetriaryColor 3px solid;
+	align-self: center;
+	margin-bottom: 2rem;
+}
+
+.bio-header {
+	text-align: center;
+	color: $tetriaryColor;
+}
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	& > p {
+		border-bottom: $tetriaryColor 3px solid;
+		padding-bottom: 1rem;
+	}
+}
+
+.projects-container {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 3rem;
+}
+
+.projects-button,
+.contact-button {
+	@include button();
+}
+
+@import "navBar";
+@import "mobile";
+@import "work";
+@import "contact";
+@import "footer";

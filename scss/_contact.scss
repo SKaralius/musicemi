@@ -1,0 +1,21 @@
+.contact-title {
+	@include titles();
+}
+
+.contact-list {
+	& > ul {
+	}
+	& > ul > li {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		& > i {
+		}
+		& > span {
+			width: 70%;
+			font-size: 1rem;
+			align-self: center;
+		}
+	}
+	@include socialIcons();
+}

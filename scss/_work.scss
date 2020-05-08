@@ -1,0 +1,38 @@
+.video-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	height: 0;
+	margin-bottom: 2rem;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-navigation {
+	display: flex;
+	justify-content: space-around;
+	& > i {
+		align-self: center;
+		&:hover {
+			@include easeOut();
+			color: $tetriaryColor;
+			cursor: pointer;
+		}
+	}
+}
+
+.work-title,
+.work-title-outro {
+	@include titles();
+	padding-bottom: 2rem;
+	span {
+		border: $tetriaryColor 3px double;
+		border-radius: 16px;
+		padding: 0.5rem;
+	}
+}

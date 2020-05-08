@@ -1,0 +1,94 @@
+// Widescreen
+@include mediaXl {
+	//Index
+	.biography {
+		padding-bottom: 0;
+		width: 60%;
+		margin: auto;
+	}
+	.row {
+		margin: 3rem;
+
+		flex-flow: row;
+		& > img {
+			margin: 0;
+		}
+		& > p {
+			border: none;
+			flex: 1;
+			padding: 0;
+			margin: 0;
+			padding: 3rem;
+		}
+	}
+	//Work
+	.work-title {
+		& > h4 {
+			margin: 1rem !important;
+		}
+	}
+	.video-container {
+		width: 80% !important;
+		margin: auto !important;
+		margin-bottom: 2rem !important;
+	}
+	//contact
+	.contact-list {
+		& > ul > li > span {
+			font-size: 2rem !important;
+		}
+	}
+}
+//Desktops and laptops
+@include mediaLg {
+	//index
+	.row {
+		margin: 3rem;
+
+		flex-flow: row;
+		& > img {
+			margin: 0;
+		}
+		& > p {
+			border: none;
+			flex: 1;
+			padding: 0;
+			margin: 0;
+			padding: 3rem;
+		}
+	}
+	//contact
+	.contact-list {
+		& > ul > li > span {
+			font-size: 2rem !important;
+		}
+	}
+}
+//Tablets and small laptoms
+@include mediaMd {
+	//Hamburger
+	.menu-btn {
+		visibility: visible;
+	}
+	.hide {
+		display: none;
+		& > * {
+			display: none;
+		}
+	}
+	.row {
+		justify-content: center;
+	}
+}
+//Smartphones
+@include mediaSm {
+	//index
+	.picture-text {
+		flex-flow: column;
+		text-align: center;
+	}
+
+	.row {
+		justify-content: center;
+	}
+}
